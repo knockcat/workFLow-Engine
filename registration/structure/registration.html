@@ -1,56 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../styles/style.css" />
-    <title>work flow</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  />
   </head>
   <body>
-    <section>
-      <div class="form-box">
-        <div class="form-value">
-          <form action="">
-            <strong> <h2>Register</h2> </strong>
-            <div class="inputbox">
-              <ion-icon name="name-outline"></ion-icon>
-              <input type="name" required />
-              <label for="">Full Name</label>
+    <div class="container">
+      <div class="title">Register Here</div>
+      <br>
+      
+      <form action="">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"> Email </span>
+            <input
+              type="text"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              placeholder="Enter Your Email"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details"> Confirm Email </span>
+            <input
+              type="text"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              placeholder="Enter Your Email"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details"> First Name </span>
+            <input type="text" placeholder="Enter Your First Name" required />
+          </div>
+          <div class="input-box">
+            <span class="details"> Last Name </span>
+            <input type="text" placeholder="Enter Your Last name" required />
+          </div>
+          <div class="input-box">
+            <span class="details"> User Name </span>
+            <input type="text" placeholder="Enter Your User Name" required />
+          </div>
+          <div class="input-box">
+            <span class="details"> Password </span>
+            <input
+              type="text"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              placeholder="Enter Your Password"
+              required
+              />
             </div>
-            <div class="inputbox">
-              <ion-icon name="password"></ion-icon>
-              <input type="password" required />
-              <label pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" for=""
-                >Password</label
-              >
+            <div class="input-box">
+              <span class="details"> Confirm Password </span>
+              <input
+                type="text"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                placeholder="Confirm your Password"
+                required
+              />
             </div>
-            <div class="inputbox">
-              <ion-icon name="confirmPassword"></ion-icon>
-              <input type="password" required />
-              <label pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" for=""
-                >Confirm password</label
-              >
-            </div>
-
-            <div class="inputbox">
-              <ion-icon name="mail-outline"></ion-icon>
-              <input type="email" required />
-              <label for="">Email</label>
-            </div>
-            <button>Sign in</button>
-            <div class="register">
-              <p>Have and account?<a href="login.html">Sign Up</a></p>
-            </div>
-          </form>
+          <div class="input-box">
+            <span class="details"> Phone Number </span>
+            <input
+              type="text"
+              pattern="^\d{10}$"
+              placeholder="Enter Your Phone Number"
+              required
+            />
+          </div>
+          
         </div>
-      </div>
-    </section>
+
+        <div class="usecase-details">
+          <input type="radio" name="usecase" id="dot-1" />
+          <input type="radio" name="usecase" id="dot-2" />
+          <span class="usecase-title">Use Case</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Personal </span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Professional</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Sign Up"/>
+        </div>
+        <div class="register">
+          <p>Have a account? <a href="login.html">Sign In</a></p>
+            <p>Or you can Sign in with</p>
+            <div class="icons">
+              <a href="#" class="google"><i class="fab fa-google"></i></a>
+              <a href="#" class="git"><i class="fab fa-github"></i></a>
+              <a href="#" class="linked"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+      </form>
+    </div>
+
     <script src="../js/scripts.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
